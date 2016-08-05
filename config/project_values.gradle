@@ -1,0 +1,11 @@
+ext {
+    application_id         = "com.siziksu.architecture"
+    compile_sdk_version    = 22
+    build_tools_version    = "24.0.0"
+    min_sdk_version        = 19
+    target_sdk_version     = 22
+    version_code           = 2219001
+    version_name           = "0.0.1"
+
+    test_instrumentation_runner = "android.support.test.runner.AndroidJUnitRunner"
+}

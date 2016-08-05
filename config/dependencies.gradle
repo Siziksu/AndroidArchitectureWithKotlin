@@ -1,0 +1,59 @@
+ext {
+    // Versions
+    android_support_version             = '22.2.1'
+    android_support_v4_version          = android_support_version
+    android_support_annotations_version = android_support_version
+    android_appcompat_v7_version        = android_support_version
+    android_design_version              = android_support_version
+    android_recyclerview_v7_version     = android_support_version
+    android_cardview_v7_version         = android_support_version
+    android_multidex_version            = '1.0.1'
+    android_play_services_version       = '8.4.0'
+    gson_version                        = '2.6.2'
+    retrofit2_version                   = '2.0.2'
+    okhttp_version                      = '3.3.1'
+    okhttp_loggin_interceptor_version   = '3.3.1'
+    realm_version                       = '0.87.5'
+    rxandroid_version                   = '1.2.1'
+    rxjava_version                      = '1.1.8'
+
+    kotlin_version                      = '1.0.3'
+    anko_version                        = '0.9'
+
+    junit_version                       = '4.12'
+    android_support_test_version        = '0.4.1'
+    espresso_version                    = '2.2.1'
+
+    // Dependencies
+    android_support_v4          = "com.android.support:support-v4:${android_support_v4_version}"
+    android_support_annotations = "com.android.support:support-annotations:${android_support_annotations_version}"
+    android_appcompat_v7        = "com.android.support:appcompat-v7:${android_appcompat_v7_version}"
+    android_design              = "com.android.support:design:${android_design_version}"
+    android_recyclerview_v7     = "com.android.support:recyclerview-v7:${android_recyclerview_v7_version}"
+    android_cardview_v7         = "com.android.support:cardview-v7:${android_cardview_v7_version}"
+    android_multidex            = "com.android.support:multidex:${android_multidex_version}"
+    gson                        = "com.google.code.gson:gson:${gson_version}"
+    android_play_services_gcm   = "com.google.android.gms:play-services-gcm:${android_play_services_version}"
+    retrofit2                   = "com.squareup.retrofit2:retrofit:${retrofit2_version}"
+    retrofit2_converter_gson    = "com.squareup.retrofit2:converter-gson:${retrofit2_version}"
+    okhhtp                      = "com.squareup.okhttp3:okhttp:${okhttp_version}"
+    okhttp_loggin_interceptor   = "com.squareup.okhttp3:logging-interceptor:${okhttp_loggin_interceptor_version}"
+    realm                       = "io.realm:realm-android:${realm_version}"
+    rxandroid                   = "io.reactivex:rxandroid:${rxandroid_version}"
+    rxjava                      = "io.reactivex:rxjava:${rxjava_version}"
+
+    kotlin                      = "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    kotlin_classpath            = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    kotlin_extensions_classpath = "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+    anko                        = "org.jetbrains.anko:anko-sdk15:$anko_version" // sdk19, sdk21, sdk23 are also available
+    anko_support_v4             = "org.jetbrains.anko:anko-support-v4:$anko_version" // in case you need support-v4 bindings
+    anko_appcompat_v7           = "org.jetbrains.anko:anko-appcompat-v7:$anko_version" // for appcompat-v7 bindings
+
+    junit                       = "junit:junit:${junit_version}"
+    android_test_runner         = "com.android.support.test:runner:${android_support_test_version}"
+    android_test_rules          = "com.android.support.test:rules:${android_support_test_version}"
+    android_support_annotations = "com.android.support:support-annotations:${android_support_annotations_version}"
+    espresso_core               = "com.android.support.test.espresso:espresso-core:${espresso_version}"
+    espreso_contrib             = "com.android.support.test.espresso:espresso-contrib:${espresso_version}"
+    espresso_web                = "com.android.support.test.espresso:espresso-web:${espresso_version}"
+}
