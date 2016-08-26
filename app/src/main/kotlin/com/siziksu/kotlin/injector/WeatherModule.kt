@@ -14,19 +14,17 @@ import com.siziksu.kotlin.presenter.weather.WeatherPresenter
 object WeatherModule {
 
     private val getIWeatherClient: IWeatherClient
-    private val weatherPresenter: IWeatherPresenter<WeatherPresenter, IWeatherView>
 
     init {
-        weatherPresenter = WeatherPresenter()
         getIWeatherClient = WeatherClient(WeatherClientAdapter.getService())
     }
 
-    val weather: IWeatherPresenter<WeatherPresenter, IWeatherView>
-        get() = weatherPresenter.setGetWeatherRequest(weatherRequest)
+    val weather: IWeatherPresenter<IWeatherView>
+        get() = WeatherPresenter(weatherRequest)
 
     private val weatherRequest: IGetWeatherRequest
         get() = GetWeatherRequest(weatherData)
 
     private val weatherData: IGetWeatherData<*>
-        get() = GetWeatherData().setGetWeatherClient(getIWeatherClient)
+        get() = GetWeatherData(getIWeatherClient)
 }

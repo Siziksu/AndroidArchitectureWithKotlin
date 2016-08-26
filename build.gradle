@@ -2,11 +2,13 @@ apply from: 'config/dependencies.gradle'
 apply from: 'config/project_values.gradle'
 
 buildscript {
+    ext.kotlin_version = '1.0.3'
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:2.1.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 

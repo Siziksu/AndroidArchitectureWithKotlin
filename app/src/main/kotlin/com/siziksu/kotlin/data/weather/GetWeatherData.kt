@@ -5,21 +5,14 @@ import com.siziksu.kotlin.common.model.weather.OpenWeather
 import com.siziksu.kotlin.data.Data
 import com.siziksu.kotlin.data.client.weather.IWeatherClient
 
-class GetWeatherData : Data(), IGetWeatherData<GetWeatherData> {
+class GetWeatherData(private val weatherClient: IWeatherClient) : Data(), IGetWeatherData<GetWeatherData> {
 
     private val KEY_WEATHER_CACHE = "weather_cache"
     private val EXPIRY_TIME: Long = 30000
 
-    private var IWeatherClient: IWeatherClient? = null
-
     private var city: String = ""
     private var useCache: Boolean = false
     private var expiry: Long = 0
-
-    override fun setGetWeatherClient(client: IWeatherClient): GetWeatherData {
-        this.IWeatherClient = client
-        return this
-    }
 
     override fun city(city: String): GetWeatherData {
         this.city = city
@@ -44,7 +37,7 @@ class GetWeatherData : Data(), IGetWeatherData<GetWeatherData> {
     }
 
     private fun getWeatherFromClient(): OpenWeather? {
-        val openWeather = IWeatherClient?.getWeather(city) ?: getOpenWeatherFromCache()
+        val openWeather = weatherClient.getWeather(city)
         if (useCache) {
             val newCache = Gson().toJson(openWeather)
             setCache(KEY_WEATHER_CACHE, newCache)

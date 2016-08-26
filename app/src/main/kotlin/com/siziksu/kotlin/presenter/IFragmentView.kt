@@ -1,10 +1,6 @@
 package com.siziksu.kotlin.presenter
 
-import android.app.Activity
-
-interface View {
-
-    val activity: Activity
+interface IFragmentView {
 
     fun showProgress(value: Boolean)
 }
